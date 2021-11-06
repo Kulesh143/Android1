@@ -26,7 +26,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Plus"
-
         app:layout_constraintTop_toBottomOf="@id/txt1"
         app:layout_constraintLeft_toLeftOf="@id/txt1"
         app:layout_constraintRight_toRightOf="@id/txt1"
@@ -37,7 +36,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Minus"
-
         app:layout_constraintTop_toBottomOf="@id/plus"
         app:layout_constraintRight_toRightOf="@id/plus"
         app:layout_constraintLeft_toLeftOf="@id/plus"
@@ -48,32 +46,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reset"
-
         app:layout_constraintTop_toBottomOf="@id/minus"
         app:layout_constraintLeft_toLeftOf="@id/minus"
         app:layout_constraintRight_toRightOf="@id/minus"
         />
 
     <ImageView
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:src="@drawable/jack"
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+       app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/jack"
         android:scaleType="fitXY"
         />
 
     <Button
-        android:id="@+id/btnshow"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hide/Show"
         app:layout_constraintTop_toBottomOf="@id/imageView"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        />
+        app:layout_constraintRight_toRightOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

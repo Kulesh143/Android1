@@ -14,7 +14,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 private TextView txt;
 private Button plus,minus,reset,btnshow;
-private ImageView imageView;
+ImageView imageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +27,7 @@ private ImageView imageView;
         plus.setOnClickListener(this);
         minus.setOnClickListener(this);
         reset.setOnClickListener(this);
-        btnshow=findViewById(R.id.btnshow);
+        btnshow=findViewById(R.id.button);
         imageView=findViewById(R.id.imageView);
         btnshow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,8 +39,7 @@ private ImageView imageView;
                 }
             }
         });
-
-
+//
 //        plus.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -67,77 +67,80 @@ private ImageView imageView;
 //                txt.setText("0");
 //            }
 //        });
-//    }
-    }
 
-    public void plusm(View view) {
-        int counter= Integer.parseInt(txt.getText().toString());
-        counter++;
-        txt.setText(counter+"");
-        Toast.makeText(MainActivity.this,counter+"",Toast.LENGTH_SHORT).show();
-    }
-
-    public void minusm(View view) {
-        int counter=Integer.parseInt(txt.getText().toString());
-        if(counter!=0){
-            counter--;
-            txt.setText(counter+"");
-            Toast.makeText(MainActivity.this,counter+"",Toast.LENGTH_SHORT).show();
-
-        }
-    }
-
-    public void resetm(View view) {
-        txt.setText("0");
-    }
-
-
-    public void operation(View view) {
-        int id=view.getId();
-        int counter=0;
-        switch(id){
-
-            case R.id.plus:
-                counter= Integer.parseInt(txt.getText().toString());
-                counter++;
-                txt.setText(counter+"");
-                break;
-               // Toast.makeText(MainActivity.this,counter+"",Toast.LENGTH_SHORT).show();
-            case R.id.minus:
-                counter= Integer.parseInt(txt.getText().toString());
-                if(counter!=0) {
-                    counter--;
-                    txt.setText(counter + "");
-                    //  Toast.makeText(MainActivity.this,counter+"",Toast.LENGTH_SHORT).show();
-                }break;
-                case R.id.reset:
-                txt.setText("0");
-                break;
-        }
     }
 
     @Override
     public void onClick(View view) {
         int id=view.getId();
         int counter=0;
-        switch(id){
-
+        switch (id){
             case R.id.plus:
                 counter= Integer.parseInt(txt.getText().toString());
                 counter++;
                 txt.setText(counter+"");
+                Toast.makeText(MainActivity.this,counter+"",Toast.LENGTH_SHORT).show();
                 break;
-            // Toast.makeText(MainActivity.this,counter+"",Toast.LENGTH_SHORT).show();
             case R.id.minus:
-                counter= Integer.parseInt(txt.getText().toString());
-                if(counter!=0) {
+                counter=Integer.parseInt(txt.getText().toString());
+                if(counter!=0){
                     counter--;
-                    txt.setText(counter + "");
-                    //  Toast.makeText(MainActivity.this,counter+"",Toast.LENGTH_SHORT).show();
-                }break;
+                    txt.setText(counter+"");
+                    Toast.makeText(MainActivity.this,counter+"",Toast.LENGTH_SHORT).show();
+
+                }
+                break;
             case R.id.reset:
                 txt.setText("0");
                 break;
         }
     }
+
+//
+//    public void plusmethod(View view) {
+//        int counter= Integer.parseInt(txt.getText().toString());
+//        counter++;
+//        txt.setText(counter+"");
+//        Toast.makeText(MainActivity.this,counter+"",Toast.LENGTH_SHORT).show();
+//    }
+//
+//    public void minusmethod(View view) {
+//        int counter=Integer.parseInt(txt.getText().toString());
+//        if(counter!=0){
+//            counter--;
+//            txt.setText(counter+"");
+//            Toast.makeText(MainActivity.this,counter+"",Toast.LENGTH_SHORT).show();
+//
+//        }
+//    }
+//
+//    public void resetmethod(View view) {
+//
+//        txt.setText("0");
+//    }
+
+//    public void operation(View view) {
+//        int id=view.getId();
+//        int counter=0;
+//        switch (id){
+//            case R.id.plus:
+//                counter= Integer.parseInt(txt.getText().toString());
+//                counter++;
+//                txt.setText(counter+"");
+//                Toast.makeText(MainActivity.this,counter+"",Toast.LENGTH_SHORT).show();
+//                break;
+//            case R.id.minus:
+//                counter=Integer.parseInt(txt.getText().toString());
+//                if(counter!=0){
+//                    counter--;
+//                    txt.setText(counter+"");
+//                    Toast.makeText(MainActivity.this,counter+"",Toast.LENGTH_SHORT).show();
+//
+//                }
+//                break;
+//            case R.id.reset:
+//                txt.setText("0");
+//                break;
+//        }
+//    }
 }
