@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainSigin">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hgg10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hgg90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vgg10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vgg90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <TextView
+        android:id="@+id/textViewall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In Now"
+        app:layout_constraintTop_toBottomOf="@id/hgg10"
+        app:layout_constraintLeft_toLeftOf="@id/vgg10"
+        app:layout_constraintRight_toLeftOf="@id/vgg90"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="82dp" />
+
+    <EditText
+        android:id="@+id/email1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="32sp"
+        app:layout_constraintTop_toBottomOf="@id/textViewall"
+        app:layout_constraintLeft_toLeftOf="@id/vgg10"
+        app:layout_constraintRight_toLeftOf="@id/vgg90"
+        android:inputType="textEmailAddress"
+        android:hint="Enter Your Email"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="131dp" />
+
+    <EditText
+        android:id="@+id/password1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="20sp"
+        android:inputType="textPassword"
+        android:hint="Enter Your Password"
+        app:layout_constraintTop_toBottomOf="@id/email1"
+        app:layout_constraintLeft_toLeftOf="@id/vgg10"
+        app:layout_constraintRight_toLeftOf="@id/vgg90"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:text="Did you sign in?"
+        android:layout_marginLeft="10sp"
+        app:layout_constraintLeft_toLeftOf="@id/vgg10"
+        app:layout_constraintTop_toBottomOf="@id/password1"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="308dp" />
+
+    <Button
+        android:id="@+id/signup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="13sp"
+        android:backgroundTint="#FFA500"
+        app:layout_constraintTop_toBottomOf="@id/password1"
+        app:layout_constraintLeft_toRightOf="@id/textView3"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="266dp" />
+
+    <Button
+        android:id="@+id/signinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:onClick="goHome"
+        android:textSize="32sp"
+        app:layout_constraintRight_toRightOf="@id/vgg90"
+        app:layout_constraintLeft_toLeftOf="@id/vgg10"
+        app:layout_constraintTop_toBottomOf="@id/signup1"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="341dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
